@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <input id="peso" type="number" placeholder="peso">
+    <input id="altura" type="number" placeholder="altura">
+    <h1 id="resultado"> </h1>
+
+
+
+    <button onclick="btn()"> calcular </button>
+
+    <script>
+        function btn() {
+            const peso = Number(document.getElementById('peso').value);
+            const altura = Number(document.getElementById('altura').value);
+            let resultado = peso / (altura * altura);
+            document.getElementById('resultado').innerHTML = resultado;
+            console.log(resultado)
+            if (resultado <= 18.5) {
+                document.getElementById('resultado').innerHTML = "Baixo peso";
+            } else if (resultado <= 24.9) {
+                document.getElementById('resultado').innerHTML = "peso medio";
+            } else if (resultado >= 25.0) {
+                document.getElementById('resultado').innerHTML = "sobrepeso";
+            }
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
